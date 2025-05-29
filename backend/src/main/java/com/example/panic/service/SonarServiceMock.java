@@ -1,13 +1,12 @@
 package com.example.panic.service;
 
+import org.springframework.stereotype.Service;
 import java.util.Map;
 
-/**
- * A dummy implementation that always returns 0.75
- */
+@Service
 public class SonarServiceMock implements SonarService {
     @Override
-    public double analyze(String sms, String email, Map<String,Object> wearableData) {
+    public double analyze(String sms, String email, Map<String, Object> wearableData) {
         return 0.75;
     }
 }
