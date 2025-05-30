@@ -2,12 +2,15 @@ package com.example.panic.service;
 
 import com.example.panic.prompt.CalmPrompt;
 import com.example.panic.prompt.CalmPromptBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
 @Service
 public class PanicInterventionService {
+    private static final Logger log = LoggerFactory.getLogger(PanicInterventionService.class);
     private final SonarService sonar;
     private final LLMService llm;
 
@@ -30,6 +33,7 @@ public class PanicInterventionService {
     ) {
         // 1. Get a panic score from Sonar
         double score = sonar.analyze(sms, email, wearables);
+        log.info("\uD83D\uDD0D Panic score = {}", score);
 
         // 2. Build the CalmPrompt
         CalmPrompt prompt = new CalmPromptBuilder()

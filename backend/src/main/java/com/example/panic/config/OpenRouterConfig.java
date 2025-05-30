@@ -20,6 +20,13 @@ public class OpenRouterConfig {
 
     @Bean
     public WebClient openRouterClient() {
+        if (baseUrl == null || baseUrl.trim().isEmpty()) {
+            throw new IllegalStateException("OpenRouter base URL is not configured");
+        }
+        if (apiKey == null || apiKey.trim().isEmpty()) {
+            throw new IllegalStateException("OpenRouter API key is not configured");
+        }
+
         // Force use of the JDK DNS resolver (avoids search-domain NXDOMAIN)
         HttpClient httpClient = HttpClient.create()
                 .resolver(DefaultAddressResolverGroup.INSTANCE);
