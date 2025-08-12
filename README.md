@@ -9,7 +9,7 @@ A mobile-first system that detects potential panic/anxiety from user text (SMS/e
 
 ## 🎥 Demo
 
-<video src="Demo_Video.mp4" controls playsinline width="100%"></video>
+▶️ **Watch the demo:** [Demo_Video.mp4](Demo_Video.mp4)
 
 ---
 
