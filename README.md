@@ -1,4 +1,4 @@
-# Emotional Calming Mobile App (Panic Detection & Intervention)
+# EaseMind (Panic Detection & Intervention)
 
 A mobile-first system that detects potential panic/anxiety from user text (SMS/email content or manual survey) and returns a personalized, calming intervention.
 
